@@ -1,9 +1,9 @@
 import React from "react"
-import { allProducts } from "../hooks/fetchAllProducts"
-import { images } from "../hooks/fetchImages"
 import Slider from "react-slick";
+import allProducts from "../hooks/fetchAllProducts"
+import images from "../hooks/fetchImages"
 
-const HomeProducts = () => {
+export default ({ children }) => {
     const products = allProducts()
     const image = images()
 
@@ -47,5 +47,3 @@ const HomeProducts = () => {
         </section>
     ) 
 }
-
-export default HomeProducts;

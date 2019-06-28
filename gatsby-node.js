@@ -129,6 +129,14 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
             test: /interweave/,
             use: loaders.null(),
           },
+          {
+            test: /gatsby-plugin-glamor/,
+            use: loaders.null(),
+          },
+          {
+            test: /invariant/,
+            use: loaders.null(),
+          },
         ],
       },
     })

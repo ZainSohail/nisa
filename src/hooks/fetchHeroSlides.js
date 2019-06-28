@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from "gatsby"
 
-export const wpHeroSlides = () => {
+const wpHeroSlides = () => {
   const wpHeroSlides = useStaticQuery(
     graphql`
       query wpHeroSlides {
@@ -39,3 +39,5 @@ export const wpHeroSlides = () => {
 
   return wpHeroSlides.wordpressWpSlides.data
 }
+
+export default wpHeroSlides

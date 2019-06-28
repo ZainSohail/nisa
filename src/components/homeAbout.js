@@ -1,7 +1,7 @@
 import React from "react"
-import { images } from "../hooks/fetchImages"
+import images from "../hooks/fetchImages"
 
-const HomeAbout = () => {
+export default ({ children }) => {
     const image = images()
 
     return (
@@ -30,5 +30,3 @@ const HomeAbout = () => {
         </section>
     ) 
 }
-
-export default HomeAbout;

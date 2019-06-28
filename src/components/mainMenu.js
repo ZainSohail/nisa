@@ -1,8 +1,8 @@
 import React from "react"
-import { menuItems } from "../hooks/fetchMenu"
-import { wpOptions } from "../hooks/fetchOptions"
+import menuItems from "../hooks/fetchMenu"
+import wpOptions from "../hooks/fetchOptions"
 
-const MainMenu = () => {
+export default ({ children }) => {
     const items = menuItems().items
     const options = wpOptions()
     var path = null;
@@ -36,5 +36,3 @@ const MainMenu = () => {
         </div>
     ) 
 }
-
-export default MainMenu;

@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from "gatsby"
 
-export const wpOptions = () => {
+const wpOptions = () => {
   const wpOptions = useStaticQuery(
     graphql`
       query wpOptions {
@@ -30,3 +30,5 @@ export const wpOptions = () => {
 
   return wpOptions.wordpressWpOptions.data
 }
+
+export default wpOptions

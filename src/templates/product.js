@@ -1,7 +1,8 @@
-import React, { Component } from "react"
+import {React, Component} from "react"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 
-class PostTemplate extends Component {
+class ProductTemplate extends Component {
     render() {
         const siteMetadata = this.props.data.site.siteMetadata
         const currentPage = this.props.data.wordpressWpProducts
@@ -20,7 +21,7 @@ class PostTemplate extends Component {
 }
 
 
-export default PostTemplate
+export default ProductTemplate
 
 export const productQuery = graphql`
     query currentProductQuery($id: String!) {

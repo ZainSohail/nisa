@@ -1,8 +1,8 @@
 import React from "react"
-import { allBlogPosts } from "../hooks/fetchBlogPosts"
-import { images } from "../hooks/fetchImages"
+import allBlogPosts from "../hooks/fetchBlogPosts"
+import images from "../hooks/fetchImages"
 
-const HomeBlog = () => {
+export default ({ children }) => {
     const posts = allBlogPosts()
     const image = images()
 
@@ -35,5 +35,3 @@ const HomeBlog = () => {
         </section>
     ) 
 }
-
-export default HomeBlog;

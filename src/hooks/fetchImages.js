@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from "gatsby"
 
-export const images = () => {
+const images = () => {
   const images = useStaticQuery(graphql`
     query {
         placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
@@ -99,4 +99,5 @@ export const images = () => {
 
   return images
 }
-
+ 
+export default images

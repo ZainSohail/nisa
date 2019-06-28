@@ -1,17 +1,11 @@
 import React from "react"
-import { wpOptions } from "../hooks/fetchOptions"
-import { FaFacebookF } from 'react-icons/fa';
-import { FaInstagram } from 'react-icons/fa';
-import { FaEnvelope } from 'react-icons/fa';
-import { FaPhone } from 'react-icons/fa';
-import { FaMapMarker } from 'react-icons/fa';
-import { Markup } from 'interweave';
+import wpOptions from "../hooks/fetchOptions"
+import { FaFacebookF, FaInstagram, FaEnvelope, FaPhone, FaMapMarker } from 'react-icons/fa';
 
-const Footer = () => {
-    const options = wpOptions();
+export default ({ children }) => {
+    const options = wpOptions()
 
     return (
-        
         <footer>
             <section className="page-section contact" id="contact">
                 <div className="container">
@@ -31,7 +25,11 @@ const Footer = () => {
                                     <FaPhone className="social-icon-light" size="4em" />
                                 </span>
                                 <h3>PHONE</h3>
-                                <Markup content={options.phone} />
+                                <p
+                                   dangerouslySetInnerHTML={{
+                                      __html: options.phone
+                                   }}
+                                />
                             </div>
                         </div>
                         <div className="col-sm-12 col-md-4">
@@ -40,7 +38,11 @@ const Footer = () => {
                                     <FaEnvelope className="social-icon-light" size="4em" />
                                 </span>
                                 <h3>EMAIL</h3>
-                                <Markup content={options.email} />
+                                <p
+                                   dangerouslySetInnerHTML={{
+                                      __html: options.email
+                                   }}
+                                />
                             </div>
                         </div>
                         <div className="col-sm-12 col-md-4">
@@ -49,15 +51,21 @@ const Footer = () => {
                                     <FaMapMarker className="social-icon-light" size="4em" />
                                 </span>
                                 <h3>ADDRESS</h3>
-                                <Markup content={options.address} />
+                                <p
+                                   dangerouslySetInnerHTML={{
+                                      __html: options.address
+                                   }}
+                                />
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <p>{options.copyrights}</p>
+            <p
+               dangerouslySetInnerHTML={{
+                  __html: options.copyrights
+               }}
+            />
         </footer>
     )
 }
-
-export default Footer

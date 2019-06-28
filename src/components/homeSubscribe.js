@@ -1,9 +1,8 @@
 import React from "react"
-import { images } from "../hooks/fetchImages"
+import images from "../hooks/fetchImages"
 import addToMailchimp from 'gatsby-plugin-mailchimp'
-import { Markup } from 'interweave';
 
-const HomeSubscribe = (props, state) => {
+export default ({ children }) => {
     const image = images()
     var email = null
 
@@ -20,7 +19,10 @@ const HomeSubscribe = (props, state) => {
 
         addToMailchimp(email) // listFields are optional if you are only capturing the email address.
         .then(data => {
-            var message = <Markup content={data.msg} />
+            var message = <p dangerouslySetInnerHTML={{
+                                      __html: data.msg
+                                   }}
+                                />
             
             if (typeof document !== `undefined`) {
                 var theDiv = document.getElementById("subMessage")
@@ -52,7 +54,5 @@ const HomeSubscribe = (props, state) => {
         </section>
     ) 
 }
-
-export default HomeSubscribe;
 
 

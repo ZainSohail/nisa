@@ -47,11 +47,11 @@ const Layout = ({ children }) => {
           <meta name="twitter:title" content={data.allWordpressSiteMetadata.nodes[0].name} />
           <meta name="twitter:description" content={data.allWordpressSiteMetadata.nodes[0].description} />
       </Helmet>
-      <Header/>
+      <Header />
         <div>
           <main>{children}</main>
         </div>
-      <Footer/>
+      <Footer />
     </>
   )
 }

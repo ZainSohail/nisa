@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from "gatsby"
 
-export const menuItems = () => {
+const menuItems = () => {
   const menuItems = useStaticQuery(
     graphql`
       query menuItems {
@@ -26,3 +26,5 @@ export const menuItems = () => {
 
   return menuItems.allWordpressWpApiMenusMenusItems.nodes[0]
 }
+
+export default menuItems

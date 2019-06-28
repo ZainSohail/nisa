@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from "gatsby"
 
-export const allBlogPosts = () => {
+const allBlogPosts = () => {
   const allBlogPosts = useStaticQuery(
     graphql`
         query allBlogPosts {
@@ -30,3 +30,5 @@ export const allBlogPosts = () => {
 
   return allBlogPosts.allWordpressPost.edges
 }
+
+export default allBlogPosts

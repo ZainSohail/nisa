@@ -1,9 +1,9 @@
 import React from "react"
-import { wpHeroSlides } from "../hooks/fetchHeroSlides"
-import { images } from "../hooks/fetchImages"
+import wpHeroSlides from "../hooks/fetchHeroSlides"
+import images from "../hooks/fetchImages"
 import Slider from "react-slick";
 
-const HeroSlider = () => {
+export default ({ children }) => {
     const slides = wpHeroSlides()
     const image = images()
 
@@ -52,5 +52,3 @@ const HeroSlider = () => {
         </section>
     ) 
 }
-
-export default HeroSlider;
