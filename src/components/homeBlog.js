@@ -22,7 +22,10 @@ export default ({ children }) => {
                                         <div className="content">
                                             <img src={ ( post.node.featured_media ? post.node.featured_media.localFile.childImageSharp.fluid.src : '') } alt="" />
                                             <h3>{post.node.title}</h3>
-                                            <p>{post.node.content}</p>
+                                            <p dangerouslySetInnerHTML={{
+                                                  __html: post.node.content
+                                               }}
+                                            />
                                             <a href={post.node.path}>READ MORE</a>
                                         </div>
                                     </div>
