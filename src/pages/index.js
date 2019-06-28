@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import HeroSlider from "../components/HeroSlider"
+import HeroSlider from "../components/heroSlider"
 import HomeAbout from "../components/homeAbout"
 import HomeProducts from "../components/homeProducts"
 import HomeBlog from "../components/homeBlog"
