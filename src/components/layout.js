@@ -7,40 +7,52 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
+import Helmet from "react-helmet"
+import { useStaticQuery, graphql, withPrefix, Link } from "gatsby"
 import Header from "./header"
+import Footer from "./footer"
+import SEO from "../components/seo"
 import "./layout.css"
 
 const Layout = ({ children }) => {
+   
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
+      query siteMeta {
+        allWordpressSiteMetadata {
+          nodes {
+            name
+            description
+            url
+          }
+          pageInfo {
+            currentPage
+          }
         }
       }
-    }
   `)
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+      <Helmet>
+          <title>{data.allWordpressSiteMetadata.nodes[0].name}</title>
+          <meta name="description" content={data.allWordpressSiteMetadata.nodes[0].description} />
+          <link rel="canonical" href={data.allWordpressSiteMetadata.nodes[0].url} />
+
+          {/* OpenGraph tags */}
+          <meta property="og:url" content={data.allWordpressSiteMetadata.nodes[0].url} />
+          <meta property="og:title" content={data.allWordpressSiteMetadata.nodes[0].name} />
+          <meta property="og:description" content={data.allWordpressSiteMetadata.nodes[0].description} />
+          
+          {/* Twitter Card tags */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content={data.allWordpressSiteMetadata.nodes[0].name} />
+          <meta name="twitter:description" content={data.allWordpressSiteMetadata.nodes[0].description} />
+      </Helmet>
+      <Header/>
+        <div>
+          <main>{children}</main>
+        </div>
+      <Footer/>
     </>
   )
 }
