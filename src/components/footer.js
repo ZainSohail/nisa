@@ -31,7 +31,7 @@ const Footer = () => {
                                     <FaPhone className="social-icon-light" size="4em" />
                                 </span>
                                 <h3>PHONE</h3>
-                                <p><Markup content={options.phone} /></p>
+                                <Markup content={options.phone} />
                             </div>
                         </div>
                         <div className="col-sm-12 col-md-4">
@@ -40,7 +40,7 @@ const Footer = () => {
                                     <FaEnvelope className="social-icon-light" size="4em" />
                                 </span>
                                 <h3>EMAIL</h3>
-                                <p><Markup content={options.email} /></p>
+                                <Markup content={options.email} />
                             </div>
                         </div>
                         <div className="col-sm-12 col-md-4">
@@ -49,7 +49,7 @@ const Footer = () => {
                                     <FaMapMarker className="social-icon-light" size="4em" />
                                 </span>
                                 <h3>ADDRESS</h3>
-                                <p><Markup content={options.address} /></p>
+                                <Markup content={options.address} />
                             </div>
                         </div>
                     </div>

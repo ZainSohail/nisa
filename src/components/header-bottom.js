@@ -3,7 +3,7 @@ import React from "react"
 import MainMenu from "./mainMenu"
 
 const HeaderBottom = ({ menuItems }) => (
-    <div class="header-bottom">
+    <div className="header-bottom">
         <MainMenu menuItems={menuItems} />
     </div>
 )

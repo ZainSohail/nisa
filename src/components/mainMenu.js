@@ -3,9 +3,14 @@ import { menuItems } from "../hooks/fetchMenu"
 import { wpOptions } from "../hooks/fetchOptions"
 
 const MainMenu = () => {
-    const items = menuItems().items;
-    const options = wpOptions();
-    let path = window.location.pathname.replace('/','')
+    const items = menuItems().items
+    const options = wpOptions()
+    var path = null;
+
+    if (typeof window !== 'undefined') {
+       path = window.location.pathname.replace('/','')
+    }
+   
     return (
         <div className="container">
             <a href="/" className="logo"> <img src={options.logo.localFile.childImageSharp.fluid.src} alt="" /> </a>

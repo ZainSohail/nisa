@@ -38,7 +38,7 @@ const HomeSubscribe = (props, state) => {
             <img src={image.whiteWave.childImageSharp.fluid.originalImg} className="white-wave" />
             <div className="subscripe-form">
                 <form onSubmit={handleSubmit} >
-                    <input type="email" placeholder="Email" name="email" value={email} onChange={handleInputChange} />
+                    <input type="email" placeholder="Email" name="email" value={ (email ? email : '') } onChange={handleInputChange} />
                     <div className="submit">
                         <input type="submit" value="SUBSCRIBE TO NEWS" />
                     </div>

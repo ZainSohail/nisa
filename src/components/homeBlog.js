@@ -6,8 +6,6 @@ const HomeBlog = () => {
     const posts = allBlogPosts()
     const image = images()
 
-    console.log(posts);
-
     return (
         <section className="page-section skin-care" id="skin-care">
             <div className="container">

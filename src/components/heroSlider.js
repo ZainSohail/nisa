@@ -20,7 +20,6 @@ const HeroSlider = () => {
             <div className="main-carousel">
                 <Slider {...settings}>
                     {slides.map((slide) => { 
-                        console.log(slide);   
                         return (
                             <div className="item" style={{backgroundImage: "url(" + slide.background_image.localFile.childImageSharp.fluid.sr + ")"}}>
                                 <div className="container">

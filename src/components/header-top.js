@@ -5,8 +5,8 @@ import { FaEnvelope } from 'react-icons/fa';
 import { FaPhone } from 'react-icons/fa';
 
 const HeaderTop = () => (
-    <div class="header-top">
-        <div class="container">
+    <div className="header-top">
+        <div className="container">
             <ul>
                 <li><a href="/"> <FaFacebookF className="social-icon" /> </a></li>
                 <li><a href="/"> <FaInstagram className="social-icon" /> </a></li>

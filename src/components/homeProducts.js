@@ -16,21 +16,21 @@ const HomeProducts = () => {
     };
 
     return (
-        <section class="page-section product-category" id="products">
-            <div class="container-fluid">
+        <section className="page-section product-category" id="products">
+            <div className="container-fluid">
                 <h2>Product Category</h2>
                 <h3>OUR QUALITY PRODUCTS</h3>
-                <div class="img">
+                <div className="img">
                     <img src={image.greenWave.childImageSharp.fluid.originalImg} alt="" />
                 </div>
-                <div class="container">
-                    <div class="product-carousel">
+                <div className="container">
+                    <div className="product-carousel">
                         <Slider {...settings}>
                             {products.map((product) => {    
                                 return (
-                                     <div class="item">
-                                <div class="img">
-                                    <div class="inner">
+                                     <div className="item">
+                                <div className="img">
+                                    <div className="inner">
                                         <img src={product.node.acf.product_image.localFile.childImageSharp.fluid.src} alt="" />
                                     </div>
                                 </div>
@@ -42,7 +42,7 @@ const HomeProducts = () => {
                         </Slider>
                     </div>
                 </div>
-                <img src={image.productFlower.childImageSharp.fluid.originalImg} alt="" class="flower" />
+                <img src={image.productFlower.childImageSharp.fluid.originalImg} alt="" className="flower" />
             </div>
         </section>
     ) 
