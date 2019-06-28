@@ -6,12 +6,11 @@ import { Markup } from 'interweave';
 const HomeSubscribe = (props, state) => {
     const image = images()
     var email = null
-    var message = null;
 
     const handleInputChange = event => {
         const target = event.target
 
-        if ( target.name == 'email') {
+        if ( target.name === 'email') {
             email = target.value
         }
     }
@@ -22,8 +21,12 @@ const HomeSubscribe = (props, state) => {
         addToMailchimp(email) // listFields are optional if you are only capturing the email address.
         .then(data => {
             var message = <Markup content={data.msg} />
-            var theDiv = document.getElementById("subMessage")
-            theDiv.innerHTML = '<p>' + message.props.content + '</p>'
+            
+            if (typeof document !== `undefined`) {
+                var theDiv = document.getElementById("subMessage")
+                theDiv.innerHTML = '<p>' + message.props.content + '</p>'
+            }
+            
         })
         .catch(() => {
             
@@ -32,10 +35,10 @@ const HomeSubscribe = (props, state) => {
 
     return (
         <section className="page-section stay-in-touch" id="subscribe">
-            <img src={image.iconEmail.childImageSharp.fluid.originalImg} className="email-icon" />
+            <img src={image.iconEmail.childImageSharp.fluid.originalImg} alt="" className="email-icon" />
             <h3>SUBSCRIBE FOR NEWSLETTER</h3>
             <h2>STAY IN TOUCH</h2>
-            <img src={image.whiteWave.childImageSharp.fluid.originalImg} className="white-wave" />
+            <img src={image.whiteWave.childImageSharp.fluid.originalImg} alt="" className="white-wave" />
             <div className="subscripe-form">
                 <form onSubmit={handleSubmit} >
                     <input type="email" placeholder="Email" name="email" value={ (email ? email : '') } onChange={handleInputChange} />

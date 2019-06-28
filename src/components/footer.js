@@ -17,11 +17,11 @@ const Footer = () => {
                 <div className="container">
                     <div className="logo-social">
                         <div className="logo">
-                            <a href=""><img src={options.logo.localFile.childImageSharp.fluid.src} alt="" /></a>
+                            <a href="/"><img src={options.logo.localFile.childImageSharp.fluid.src} alt="" /></a>
                         </div>
                         <ul>
-                            <li><a href=""><FaFacebookF className="social-icon" /></a></li>
-                            <li><a href=""><FaInstagram className="social-icon" /></a></li>
+                            <li><a href="/"><FaFacebookF className="social-icon" /></a></li>
+                            <li><a href="/"><FaInstagram className="social-icon" /></a></li>
                         </ul>
                     </div>
                     <div className="row">

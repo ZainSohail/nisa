@@ -8,10 +8,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
-import { useStaticQuery, graphql, withPrefix, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Footer from "./footer"
-import SEO from "../components/seo"
 import "./layout.css"
 
 const Layout = ({ children }) => {

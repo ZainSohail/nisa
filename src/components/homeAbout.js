@@ -1,19 +1,8 @@
 import React from "react"
-import { wpHeroSlides } from "../hooks/fetchHeroSlides"
 import { images } from "../hooks/fetchImages"
-import Slider from "react-slick";
 
 const HomeAbout = () => {
-    const slides = wpHeroSlides()
     const image = images()
-
-    var settings = {
-      dots: false,
-      infinite: false,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1
-    };
 
     return (
         <section className="page-section about-nisa" id="about">
@@ -31,7 +20,7 @@ const HomeAbout = () => {
                             <img src={image.greenWave.childImageSharp.fluid.originalImg} alt="" className="wave" />
                             <p className="bold">Our group is a family company and is engaged in diversified fields of marketing, distribution and manufacturing. We have two major companies one is engaged in distribution business S.M.Bashir ncies and Trend International engaged in production and marketing of cosmetics.</p>
                             <p className="sick">We are always eager to have new and challenging assignments as we have all expertise regarding management, human resource, ware housing and adequate finance to cope any new assignment.</p>
-                            <a href="">READ MORE</a>
+                            <a href="/about-us">READ MORE</a>
                         </div>
                     </div>
                 </div>

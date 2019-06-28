@@ -126,7 +126,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
       module: {
         rules: [
           {
-            test: /bad-module/,
+            test: /interweave/,
             use: loaders.null(),
           },
         ],
