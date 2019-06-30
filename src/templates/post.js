@@ -7,7 +7,7 @@ class PostTemplate extends Component {
         const post = this.props.data.wordpressPost
 
         return (
-            <Layout> 
+            <Layout location={this.props.location} pageTitle={post.title}> 
                 <div className="container inner-content">
                     <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
                     <div dangerouslySetInnerHTML={{ __html: post.content }} />

@@ -2,6 +2,7 @@ import React from "react"
 import Slider from "react-slick";
 import allProducts from "../hooks/fetchAllProducts"
 import images from "../hooks/fetchImages"
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 export default ({ children }) => {
     const products = allProducts()
@@ -36,7 +37,9 @@ export default ({ children }) => {
                                 </div>
                                 <h3>{product.node.title}</h3>
                                 <h4>{product.node.acf.product_subtitle}</h4>
-                                <a href={product.node.path}>VIEW</a>
+                                <AniLink cover to={product.node.path} duration={1} bg="#4a107a" >
+                                  VIEW
+                                </AniLink>
                             </div>                        )
                             })}
                         </Slider>

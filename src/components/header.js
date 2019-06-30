@@ -2,11 +2,11 @@ import React from "react"
 import HeaderTop from "./header-top"
 import HeaderBottom from "./header-bottom"
 
-export default ({ children }) => {
+export default ({ pageTitle, location }) => {
     return (
       <header>
         <HeaderTop />
-        <HeaderBottom />
+        <HeaderBottom location={location} pageTitle={pageTitle} />
       </header>
     )
 }

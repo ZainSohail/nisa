@@ -3,15 +3,13 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 
 class PageTemplate extends Component {
+
     render() {
-        const siteMetadata = this.props.data.site.siteMetadata
         const currentPage = this.props.data.wordpressPage
-        
-        this.props.data.site.siteMetadata.title = siteMetadata.title;
 
         return (
-          <Layout>            
-            <div className="container inner-content">
+          <Layout location={this.props.location} pageTitle={currentPage.title} >         
+            <div className={this.props.transitionStatus + ' container inner-content'}>
                 <h1 dangerouslySetInnerHTML={{__html: currentPage.title}}/>
                 <div dangerouslySetInnerHTML={{__html: currentPage.content}}/>
             </div>

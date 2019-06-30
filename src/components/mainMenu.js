@@ -1,6 +1,7 @@
 import React from "react"
 import menuItems from "../hooks/fetchMenu"
 import wpOptions from "../hooks/fetchOptions"
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 export default ({ children }) => {
     const items = menuItems().items
@@ -20,14 +21,22 @@ export default ({ children }) => {
                 <span></span>
             </a>
             <ul className="menu">
-                {items.map((item) => {  
+                {items.map((item, i) => {  
                     if ( path === item.url ) {
                         return (
-                            <li className="active" > <a href={"/" + item.url} > {item.title} </a> </li>
+                            <li key={i} className="active" > 
+                                <AniLink paintDrip to={item.url} duration={1} hex="#4a107a" >
+                                  {item.title}
+                                </AniLink>
+                            </li>
                         ) 
                     } else {
                         return (
-                            <li> <a href={item.url} > {item.title} </a> </li>
+                            <li key={i}> 
+                                <AniLink paintDrip to={item.url} duration={1} hex="#4a107a" >
+                                  {item.title}
+                                </AniLink>
+                            </li>
                         ) 
                     }
                     

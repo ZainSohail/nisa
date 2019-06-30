@@ -6,9 +6,9 @@ import HomeProducts from "../components/homeProducts"
 import HomeBlog from "../components/homeBlog"
 import HomeSubscribe from "../components/homeSubscribe"
 
-const IndexPage = () => {
+const IndexPage = ({location}) => {
     return (        
-      <Layout>
+      <Layout customClass="home" location={location} pageTitle={'Home'} crumbLabel="Home">
         <HeroSlider />
         <HomeAbout />
         <HomeProducts />

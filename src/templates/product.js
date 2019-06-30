@@ -4,16 +4,33 @@ import Layout from "../components/layout"
 
 class ProductTemplate extends Component {
     render() {
-        const siteMetadata = this.props.data.site.siteMetadata
         const currentPage = this.props.data.wordpressWpProducts
-        
-        this.props.data.site.siteMetadata.title = siteMetadata.title;
 
         return (
-          <Layout>            
+          <Layout location={this.props.location} pageTitle={currentPage.title} >            
             <div className="container inner-content">
-                <h1 dangerouslySetInnerHTML={{__html: currentPage.title}}/>
-                <div dangerouslySetInnerHTML={{__html: currentPage.content}}/>
+                <div className="row">
+                    <div className="col-md-6">
+                        <div className="product-image">
+                            <div class="frame">
+                                <div class="inner">
+                                    <img src={currentPage.acf.product_image.localFile.childImageSharp.fluid.srcWebp} alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="col-md-6">
+                        <h1 className="product-title" dangerouslySetInnerHTML={{__html: currentPage.title}}/>
+                        <div className="product-description" dangerouslySetInnerHTML={{__html: currentPage.content}}/>
+                        <div className="product-features">
+                            <h2> PRODUCT FEATURES </h2>
+                            <p dangerouslySetInnerHTML={{__html: currentPage.acf.product_features}} />
+                        </div>
+
+
+                    </div>
+                </div>
             </div>
           </Layout>
         )
@@ -29,8 +46,19 @@ export const productQuery = graphql`
             title
             content
             slug
-            id
-            date(formatString: "MMMM DD, YYYY")
+            acf {
+                product_features
+                product_subtitle
+                product_image {
+                localFile {
+                  childImageSharp {
+                    fluid {
+                      srcWebp
+                    }
+                  }
+                }
+            }
+        }
         },
         site {
             id

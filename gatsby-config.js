@@ -13,6 +13,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-glamor`,
+    `gatsby-plugin-remove-trailing-slashes`,
     {
       resolve: "gatsby-source-wordpress",
       options: {
@@ -121,6 +122,21 @@ module.exports = {
       options: {
           endpoint: 'https://gmail.us3.list-manage.com/subscribe/post?u=9b62d2d5aae656ba9d26f5df5&amp;id=bdd5c6b91c', // add your MC list endpoint here; see instructions below
       },
-    }
+    },
+    {
+      resolve: `gatsby-plugin-breadcrumb`,
+      options: {
+        defaultCrumb: {
+          location: {
+            state: { crumbClicked: false },
+            pathname: "/",
+          },
+          output: `/sitemap.xml`,
+          crumbLabel: "Home",
+          crumbSeparator: " / "
+        },
+      },
+    },
+    `gatsby-plugin-transition-link`
   ],
 }
