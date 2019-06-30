@@ -14,7 +14,7 @@ class ProductTemplate extends Component {
                         <div className="product-image">
                             <div class="frame">
                                 <div class="inner">
-                                    <img src={currentPage.acf.product_image.localFile.childImageSharp.fluid.srcWebp} alt="" />
+                                    <img src={currentPage.acf.product_image.localFile.childImageSharp.fluid.src} alt="" />
                                 </div>
                             </div>
                         </div>
@@ -53,7 +53,7 @@ export const productQuery = graphql`
                 localFile {
                   childImageSharp {
                     fluid {
-                      srcWebp
+                      src
                     }
                   }
                 }
