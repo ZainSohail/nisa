@@ -912,8 +912,7 @@ footer {
     bottom: -42px; }
 
   section.stay-in-touch {
-    background-size: cover;
-    background-color: #c564f6; }
+      background: linear-gradient(220deg, rgba(197,100,246,1) 0%, rgba(197,100,246,1) 35%, rgba(246,100,233,1) 100%); }
 
   section.product-category div.container-fluid div.product-carousel div.item div.img div.inner img {
     transform: scale(1.1);
