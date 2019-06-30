@@ -7,20 +7,30 @@ export default ({ children }) => {
     const items = menuItems().items
     const options = wpOptions()
     var path = null;
+    var menuClass = '';
 
     if (typeof window !== 'undefined') {
        path = window.location.pathname.replace('/','')
+    }
+
+    const toggleMenu = (e) => {
+        e.preventDefault();
+        var element = document.getElementById("mobile-menu-button");
+        element.classList.toggle("opened");
+
+        var element = document.getElementById("main-menu");
+        element.classList.toggle("menu-visible");
     }
    
     return (
         <div className="container">
             <a href="/" className="logo"> <img src={options.logo.localFile.childImageSharp.fluid.src} alt="" /> </a>
-            <a href="/" className="mobile-menu-button">
+            <a href="/" className="mobile-menu-button" id="mobile-menu-button" onClick={toggleMenu} >
                 <span></span>
                 <span></span>
                 <span></span>
             </a>
-            <ul className="menu">
+            <ul className="menu" id="main-menu">
                 {items.map((item, i) => {  
                     if ( path === item.url ) {
                         return (

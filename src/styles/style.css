@@ -877,7 +877,7 @@ footer {
   background: #ead6fb; }
   footer p {
     font-size: 16px;
-    color: #a1a1a1;
+    color: #333;
     font-family: "Poppins", sans-serif;
     padding: 15px 0px;
     margin: 0; }
@@ -1364,4 +1364,10 @@ footer {
 
 .main-carousel .one {
       min-height: 260px;
+}
+
+.menu-visible {
+  display: block !important;
+  padding-top: 25px;
+  border-top: 2px solid #ddd;
 }
