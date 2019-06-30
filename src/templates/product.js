@@ -10,7 +10,7 @@ class ProductTemplate extends Component {
           <Layout location={this.props.location} pageTitle={currentPage.title} >            
             <div className="container inner-content">
                 <div className="row">
-                    <div className="col-md-6">
+                    <div className="col-sm-12 col-md-6">
                         <div className="product-image">
                             <div class="frame">
                                 <div class="inner">
@@ -20,7 +20,7 @@ class ProductTemplate extends Component {
                         </div>
                     </div>
 
-                    <div className="col-md-6">
+                    <div className="col-sm-12 col-md-6">
                         <h1 className="product-title" dangerouslySetInnerHTML={{__html: currentPage.title}}/>
                         <div className="product-description" dangerouslySetInnerHTML={{__html: currentPage.content}}/>
                         <div className="product-features">
