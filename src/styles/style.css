@@ -1386,3 +1386,27 @@ footer {
   padding-left: 0;
   margin-right: 15px;
 }
+
+button.btn,
+button.btn:active,
+button.btn:focus  {
+    background: #4c137d;
+    border-color: #4c137d;
+    border-radius: 0;
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+}
+
+button.btn:hover,
+.btn:hover {
+    background: #fff;
+    color: #4c137d;
+    border-color: #4c137d;
+    border-radius: 0;
+    outline: none;
+}
+
+.page-title-wrapper {
+  margin-bottom: 30px;
+}
