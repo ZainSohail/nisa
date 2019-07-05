@@ -37,10 +37,10 @@ export default ({ children }) => {
 
     return (
         <section className="page-section stay-in-touch" id="subscribe">
-            <img src={image.iconEmail.childImageSharp.fluid.srcWebp} alt="" className="email-icon" />
+            <img src={image.iconEmail.childImageSharp.fluid.src} alt="" className="email-icon" />
             <h3>SUBSCRIBE FOR NEWSLETTER</h3>
             <h2>STAY IN TOUCH</h2>
-            <img src={image.whiteWave.childImageSharp.fluid.srcWebp} alt="" className="white-wave" />
+            <img src={image.whiteWave.childImageSharp.fluid.src} alt="" className="white-wave" />
             <div className="subscripe-form">
                 <form onSubmit={handleSubmit} >
                     <input type="email" placeholder="Email" name="email" value={ (email ? email : '') } onChange={handleInputChange} />
@@ -49,7 +49,7 @@ export default ({ children }) => {
                     </div>
                 </form>
             </div>
-            <img src={image.stayInTouchFlower.childImageSharp.fluid.srcWebp} alt="" className="flower" />
+            <img src={image.stayInTouchFlower.childImageSharp.fluid.src} alt="" className="flower" />
             <div className="message" id="subMessage">  </div>
         </section>
     ) 

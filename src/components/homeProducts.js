@@ -47,7 +47,7 @@ export default ({ children }) => {
                 <h2>Product Category</h2>
                 <h3>OUR QUALITY PRODUCTS</h3>
                 <div className="img">
-                    <img src={image.greenWave.childImageSharp.fluid.srcWebp} alt="" />
+                    <img src={image.greenWave.childImageSharp.fluid.src} alt="" />
                 </div>
                 <div className="container">
                     <div className="product-carousel">
@@ -69,7 +69,7 @@ export default ({ children }) => {
                         </Slider>
                     </div>
                 </div>
-                <img src={image.productFlower.childImageSharp.fluid.srcWebp} alt="" className="flower" />
+                <img src={image.productFlower.childImageSharp.fluid.src} alt="" className="flower" />
             </div>
         </section>
     ) 

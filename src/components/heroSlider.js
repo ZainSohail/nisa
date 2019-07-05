@@ -21,7 +21,7 @@ export default ({ children }) => {
                 <Slider {...settings}>
                     {slides.map((slide) => { 
                         return (
-                            <div className="item" style={{backgroundImage: "url(" + slide.background_image.localFile.childImageSharp.fluid.srcWebp + ")"}}>
+                            <div className="item" style={{backgroundImage: "url(" + slide.background_image.localFile.childImageSharp.fluid.src + ")"}}>
                                 <div className="container">
                                     <div className="one">
                                         <div className="row">
@@ -36,7 +36,7 @@ export default ({ children }) => {
                                             </div>
                                             <div className="col-xs-12 col-md-6">
                                                 <div className="half img">
-                                                    <img src={slide.slider_image.localFile.childImageSharp.fluid.srcWebp} alt="" /> 
+                                                    <img src={slide.slider_image.localFile.childImageSharp.fluid.src} alt="" /> 
                                                 </div>
                                             </div>
                                         </div>
@@ -47,8 +47,8 @@ export default ({ children }) => {
                     })}
                 </Slider>
             </div>
-            <img src={image.wave.childImageSharp.fluid.srcWebp}  alt="Wave" className="wave" />
-            <a href="#about" className="go-down"> <span><img src={image.angle.childImageSharp.fluid.srcWebp} alt="" /></span> </a>
+            <img src={image.wave.childImageSharp.fluid.originalImg}  alt="Wave" className="wave" />
+            <a href="#about" className="go-down"> <span><img src={image.angle.childImageSharp.fluid.originalImg} alt="" /></span> </a>
         </section>
     ) 
 }

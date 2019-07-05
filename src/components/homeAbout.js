@@ -10,14 +10,14 @@ export default ({ children }) => {
                 <div className="row">
                     <div className="col-sm-12 col-md-6">
                         <div className="half img">
-                            <img src={image.aboutNisa.childImageSharp.fluid.srcWebp} alt="" />
+                            <img src={image.aboutNisa.childImageSharp.fluid.src} alt="" />
                         </div>
                     </div>
                     <div className="col-sm-12 col-md-6">
                         <div className="half desc">
                             <h2>About Nisa</h2>
                             <h3>Who we are</h3>
-                            <img src={image.greenWave.childImageSharp.fluid.srcWebp} alt="" className="wave" />
+                            <img src={image.greenWave.childImageSharp.fluid.src} alt="" className="wave" />
                             <p className="bold">Our group is a family company and is engaged in diversified fields of marketing, distribution and manufacturing. We have two major companies one is engaged in distribution business S.M.Bashir ncies and Trend International engaged in production and marketing of cosmetics.</p>
                             <p className="sick">We are always eager to have new and challenging assignments as we have all expertise regarding management, human resource, ware housing and adequate finance to cope any new assignment.</p>
                             <a href="/about-us">READ MORE</a>
@@ -25,8 +25,8 @@ export default ({ children }) => {
                     </div>
                 </div>
             </div>
-            <img src={image.aboutNisaLeftLeaf.childImageSharp.fluid.srcWebp} alt="" className="left-img" />
-            <img src={image.aboutNisaRightLeaf.childImageSharp.fluid.srcWebp} alt="" className="right-img" />
+            <img src={image.aboutNisaLeftLeaf.childImageSharp.fluid.src} alt="" className="left-img" />
+            <img src={image.aboutNisaRightLeaf.childImageSharp.fluid.src} alt="" className="right-img" />
         </section>
     ) 
 }

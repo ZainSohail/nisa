@@ -12,7 +12,7 @@ export default ({ children }) => {
                 <h2>SKIN CARE TIPS</h2>
                 <h3>GET LATEST TIPS</h3>
                 <div className="img">
-                    <img src={image.redWave.childImageSharp.fluid.srcWebp} alt="" />
+                    <img src={image.redWave.childImageSharp.fluid.src} alt="" />
                 </div>
                 <div className="row">
                         {posts.map((post) => {   
@@ -34,7 +34,7 @@ export default ({ children }) => {
                         })}
                 </div>
             </div>
-            <img src={image.skinCareFlower.childImageSharp.fluid.srcWebp} alt="" className="flower" />
+            <img src={image.skinCareFlower.childImageSharp.fluid.src} alt="" className="flower" />
         </section>
     ) 
 }

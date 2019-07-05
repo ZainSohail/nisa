@@ -616,7 +616,7 @@ section.product-category {
 section.skin-care {
   padding: 230px 0px 20px 0px;
   position: relative;
-  background: url(../images/skin-care-backgrpound.webp) no-repeat;
+  background: url(../images/skin-care-backgrpound.png) no-repeat;
   background-size: 100%;
   text-align: center; }
   section.skin-care h2 {
@@ -709,7 +709,7 @@ section.skin-care {
 /* // Skin Care */
 /* Stay in touch */
 section.stay-in-touch {
-  background: url("../images/stay-in-touch-background.webp") no-repeat;
+  background: url("../images/stay-in-touch-background.png") no-repeat;
   background-size: 120%;
   padding: 120px 0px 112px 0px;
   text-align: center;
