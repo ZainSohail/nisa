@@ -515,24 +515,27 @@ section.product-category {
     section.product-category div.container-fluid div.product-carousel {
       position: static; }
       section.product-category div.container-fluid div.product-carousel .slick-list {
-        padding: 30px 0px; }
+            margin: 0 60px;; }
       section.product-category div.container-fluid div.product-carousel .slick-next {
         right: 30px;
         height: 40px;
         background: url(../images/product-carousel-right.png) no-repeat;
-        width: 24px; }
+        width: 24px; 
+        top: 30%;}
         section.product-category div.container-fluid div.product-carousel .slick-next:before {
           content: ""; }
       section.product-category div.container-fluid div.product-carousel .slick-prev {
         left: 30px;
         height: 40px;
         background: url(../images/product-carousel-left.png) no-repeat;
-        width: 24px; }
+        width: 24px; 
+        z-index: 5;
+        top: 30%; }
         section.product-category div.container-fluid div.product-carousel .slick-prev:before {
           content: ""; }
       section.product-category div.container-fluid div.product-carousel div.item {
         padding: 0px 10px;
-        margin: 0px 15px; }
+        margin: 0; }
         section.product-category div.container-fluid div.product-carousel div.item div.img {
           margin-bottom: 50px;
           min-height: 300px;
@@ -544,25 +547,27 @@ section.product-category {
           -ms-box-shadow: 0px 0px 37.74px 13.26px rgba(101, 101, 101, 0.11);
           position: relative; }
           section.product-category div.container-fluid div.product-carousel div.item div.img div.inner img {
-            position: absolute;
-            max-width: 100%;
-            transform: scale(1.2);
-            -webkit-transform: scale(1.2);
-            -moz-transform: scale(1.2);
-            -o-transform: scale(1.2);
-            -ms-transform: scale(1.2);
-            bottom: -30px;
-            max-width: 200px;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
+    position: absolute;
+    max-width: 100%;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    bottom: 25px;
+    max-width: 150px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
         }
         section.product-category div.container-fluid div.product-carousel div.item h3 {
-          font-size: 24px;
-          font-family: "Poppins", sans-serif;
-          color: #141414;
-          font-weight: 600;
-          line-height: 1; }
+              font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    color: #141414;
+    font-weight: 600;
+    line-height: 1;
+    margin-top: 0;
+    min-height: 60px;}
         section.product-category div.container-fluid div.product-carousel div.item h4 {
           font-size: 14px;
           font-family: "Poppins", sans-serif;
@@ -1369,4 +1374,15 @@ footer {
   display: block !important;
   padding-top: 25px;
   border-top: 2px solid #ddd;
+}
+
+.socialmedia-share {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.socialmedia-share li {
+  display: inline-block;
+  padding-left: 0;
+  margin-right: 15px;
 }

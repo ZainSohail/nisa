@@ -10,11 +10,6 @@ const menuItems = () => {
               attr
               target
               title
-              wordpress_children {
-                url
-                title
-                order
-              }
               order
               url
             }

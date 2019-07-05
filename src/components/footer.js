@@ -14,8 +14,8 @@ export default ({ children }) => {
                             <a href="/"><img src={options.logo.localFile.childImageSharp.fluid.src} alt="" /></a>
                         </div>
                         <ul>
-                            <li><a href="/"><FaFacebookF className="social-icon" /></a></li>
-                            <li><a href="/"><FaInstagram className="social-icon" /></a></li>
+                            <li><a href={options.facebook_handle} target="_blank"><FaFacebookF className="social-icon" /></a></li>
+                            <li><a href={options.instagram_handle} target="_blank"><FaInstagram className="social-icon" /></a></li>
                         </ul>
                     </div>
                     <div className="row">

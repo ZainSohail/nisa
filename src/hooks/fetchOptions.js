@@ -21,7 +21,9 @@ const wpOptions = () => {
               phone,
               email,
               address,
-              copyrights
+              copyrights,
+              facebook_handle,
+              instagram_handle
             }
           }
         }

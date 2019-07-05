@@ -21,7 +21,7 @@ const allProducts = () => {
                           }
                         }
                       }
-                      product_subtitle
+                      product_sizes
                     }
                   }
                 }

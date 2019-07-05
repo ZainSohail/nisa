@@ -57,11 +57,10 @@ export default ({ children }) => {
                                      <div className="item">
                                 <div className="img">
                                     <div className="inner">
-                                        <img src={product.node.acf.product_image.localFile.childImageSharp.fluid.src} alt="" />
+                                      <img src={(product.node.acf.product_image) ? product.node.acf.product_image.localFile.childImageSharp.fluid.src : image.placeholderImage.childImageSharp.fluid.originalImg} alt="" />
                                     </div>
                                 </div>
-                                <h3>{product.node.title}</h3>
-                                <h4>{product.node.acf.product_subtitle}</h4>
+                                <h3 dangerouslySetInnerHTML={{__html: product.node.title}}/>
                                 <AniLink cover to={product.node.path} duration={1} bg="#4a107a" >
                                   VIEW
                                 </AniLink>
