@@ -13,7 +13,8 @@ const wpOptions = () => {
                 localFile {
                   childImageSharp {
                       fluid(maxWidth: 180) {
-                        src
+                        src,
+                        srcWebp
                       }
                     }
                 }

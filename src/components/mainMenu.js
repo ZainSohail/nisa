@@ -24,7 +24,7 @@ export default ({ children }) => {
    
     return (
         <div className="container">
-            <a href="/" className="logo"> <img src={options.logo.localFile.childImageSharp.fluid.src} alt="" /> </a>
+            <a href="/" className="logo"> <img src={options.logo.localFile.childImageSharp.fluid.srcWebp} alt="" /> </a>
             <a href="/" className="mobile-menu-button" id="mobile-menu-button" onClick={toggleMenu} >
                 <span></span>
                 <span></span>

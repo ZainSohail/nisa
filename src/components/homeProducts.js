@@ -47,7 +47,7 @@ export default ({ children }) => {
                 <h2>Product Category</h2>
                 <h3>OUR QUALITY PRODUCTS</h3>
                 <div className="img">
-                    <img src={image.greenWave.childImageSharp.fluid.originalImg} alt="" />
+                    <img src={image.greenWave.childImageSharp.fluid.srcWebp} alt="" />
                 </div>
                 <div className="container">
                     <div className="product-carousel">
@@ -57,7 +57,7 @@ export default ({ children }) => {
                                      <div className="item">
                                 <div className="img">
                                     <div className="inner">
-                                      <img src={(product.node.acf.product_image) ? product.node.acf.product_image.localFile.childImageSharp.fluid.src : image.placeholderImage.childImageSharp.fluid.originalImg} alt="" />
+                                      <img src={(product.node.acf.product_image) ? product.node.acf.product_image.localFile.childImageSharp.fluid.src : image.placeholderImage.childImageSharp.fluid.srcWebp} alt="" />
                                     </div>
                                 </div>
                                 <h3 dangerouslySetInnerHTML={{__html: product.node.title}}/>
@@ -69,7 +69,7 @@ export default ({ children }) => {
                         </Slider>
                     </div>
                 </div>
-                <img src={image.productFlower.childImageSharp.fluid.originalImg} alt="" className="flower" />
+                <img src={image.productFlower.childImageSharp.fluid.srcWebp} alt="" className="flower" />
             </div>
         </section>
     ) 

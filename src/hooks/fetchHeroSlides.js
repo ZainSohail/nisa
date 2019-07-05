@@ -17,7 +17,8 @@ const wpHeroSlides = () => {
                   localFile {
                     childImageSharp {
                         fluid(maxWidth: 1800) {
-                          src
+                          src,
+                          srcWebp
                         }
                       }
                   }
@@ -26,7 +27,8 @@ const wpHeroSlides = () => {
                   localFile {
                     childImageSharp {
                         fluid(maxWidth: 1800) {
-                          src
+                          src,
+                          srcWebp
                         }
                       }
                   }
