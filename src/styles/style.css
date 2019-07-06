@@ -721,7 +721,7 @@ section.stay-in-touch {
   section.stay-in-touch h3 {
     font-family: "Poppins", sans-serif;
     font-size: 24px;
-    color: #d0d5d8; }
+    color: #fff; }
   section.stay-in-touch h2 {
     font-size: 45px;
     color: #fff;
@@ -1064,7 +1064,23 @@ footer {
     width: 60px; }
 
   section.product-category div.container-fluid div.product-carousel .slick-list {
-    padding: 66px 0px; } }
+    padding: 66px 0px; } 
+
+      section.product-category div.container-fluid > div.img {
+        margin-bottom: 0;
+      }
+
+  section.product-category div.container-fluid div.product-carousel .slick-list {
+    margin: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  section.skin-care div.img {
+    margin-bottom: 0;
+  }
+
+  }
 @media (max-width: 768px) {
   .container {
     max-width: 720px; }
