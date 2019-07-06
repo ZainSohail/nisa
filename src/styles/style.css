@@ -1270,8 +1270,12 @@ section.product-category div.container-fluid div.product-carousel div.item div.i
   .main-carousel-content div.main-carousel div.item div.container {
     padding: 60px 0px 100px 30px !important; }
 
-  .main-carousel-content .slick-slider .slick-next, .main-carousel-content .slick-slider .slick-prev, section.product-category div.container-fluid div.product-carousel .slick-next, section.product-category div.container-fluid div.product-carousel .slick-prev {
-    display: none !important; }
+  section.product-category div.container-fluid div.product-carousel .slick-next  {
+    right: 0;
+  }
+  section.product-category div.container-fluid div.product-carousel .slick-prev {
+    left: 0; 
+  }
 
   .main-carousel-content div.main-carousel div.desc {
     padding: 0px !important; }
