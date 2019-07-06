@@ -887,6 +887,19 @@ footer {
     padding: 15px 0px;
     margin: 0; }
 
+section.product-category div.container-fluid div.product-carousel div.item div.img div.inner img.placeholder {
+    top: 38%;
+    max-width: 125px;
+}
+
+.product-image img.placeholder {
+    max-width: 120px;
+    position: absolute;
+    top: 38%;
+    left: 0;
+    right: 0;
+}
+
 /* // Footer */
 @media (min-width: 1200px) {
   .container {
@@ -924,8 +937,7 @@ footer {
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -o-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    bottom: -60px; }
+    -ms-transform: scale(1.1); }
 
   section.product-category div.container-fluid div.product-carousel div.item div.img {
     margin-bottom: 90px; }

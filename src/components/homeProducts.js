@@ -57,7 +57,10 @@ export default ({ children }) => {
                                      <div className="item">
                                 <div className="img">
                                     <div className="inner">
-                                      <img src={(product.node.acf.product_image) ? product.node.acf.product_image.localFile.childImageSharp.fluid.src : image.placeholderImage.childImageSharp.fluid.srcWebp} alt="" />
+                                      <img 
+                                      src={(product.node.acf.product_image) ? product.node.acf.product_image.localFile.childImageSharp.fluid.src : image.placeholderImage.childImageSharp.fluid.originalImg}
+                                      className={(product.node.acf.product_image) ? '' : 'placeholder'} 
+                                      alt="" />
                                     </div>
                                 </div>
                                 <h3 dangerouslySetInnerHTML={{__html: product.node.title}}/>

@@ -4,13 +4,15 @@ import images from "../hooks/fetchImages"
 export default ({ productImage }) => {
     const image = images()
 
-    console.log(productImage);
-
     return (
         <div className="product-image">
             <div className="frame">
                 <div className="inner">
-                    <img src={(productImage) ? productImage.localFile.childImageSharp.fluid.src : image.placeholderImage.childImageSharp.fluid.originalImg} alt="" />
+                    <img 
+                    src={(productImage) ? productImage.localFile.childImageSharp.fluid.src : image.placeholderImage.childImageSharp.fluid.originalImg} 
+                    className={(productImage) ? '' : 'placeholder'} 
+                    alt="" 
+                    />
                 </div>
             </div>
         </div>

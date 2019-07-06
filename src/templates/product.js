@@ -25,10 +25,16 @@ class ProductTemplate extends Component {
                     <div className="col-sm-12 col-md-6">
                         <h1 className="product-title" dangerouslySetInnerHTML={{__html: currentPage.title}}/>
                         <div className="product-description" dangerouslySetInnerHTML={{__html: currentPage.content}}/>
-                        <div className="product-features">
-                            <h2> PRODUCT WEIGHT & SIZES </h2>
-                            <p dangerouslySetInnerHTML={{__html: ( currentPage.acf.product_sizes ) ? currentPage.acf.product_sizes : ''}} />
-                        </div>
+                        { currentPage.acf.product_sizes ? (
+                            <div className="product-features">
+                                <h2> PRODUCT WEIGHT & SIZES </h2> 
+                                <p dangerouslySetInnerHTML={{__html: currentPage.acf.product_sizes}} />
+                            </div>
+
+                        ) : (
+                            ''
+                        )}
+                       
 
                         <div className="product-features">
                             <h2> SHARE THIS PRODUCT ON: </h2>
@@ -38,7 +44,7 @@ class ProductTemplate extends Component {
                                     url={this.props.location.href}
                                     title={currentPage.title}
                                     description={currentPage.content}
-                                    image={currentPage.acf.product_image}
+                                    image={( currentPage.acf.product_image ) ? currentPage.acf.product_image.localFile.childImageSharp.fluid.src : ''}
                                     className="Demo__some-network__share-button">
                                         <FaFacebookF className="social-icon" />
                                     </FacebookShareButton>
@@ -48,7 +54,7 @@ class ProductTemplate extends Component {
                                         url={this.props.location.href}
                                         title={currentPage.title}
                                         description={currentPage.content}
-                                        image={currentPage.acf.product_image}
+                                        image={( currentPage.acf.product_image ) ? currentPage.acf.product_image.localFile.childImageSharp.fluid.src : ''}
                                         className="Demo__some-network__share-button">
                                         <FaTwitter className="social-icon" /> 
                                     </TwitterShareButton>
@@ -58,7 +64,7 @@ class ProductTemplate extends Component {
                                         url={this.props.location.href}
                                         title={currentPage.title}
                                         description={currentPage.content}
-                                        image={currentPage.acf.product_image}
+                                        image={( currentPage.acf.product_image ) ? currentPage.acf.product_image.localFile.childImageSharp.fluid.src : ''}
                                         className="Demo__some-network__share-button">
                                         <FaWhatsapp className="social-icon" /> 
                                     </WhatsappShareButton>
