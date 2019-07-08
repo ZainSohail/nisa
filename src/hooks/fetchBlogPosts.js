@@ -11,7 +11,7 @@ const allBlogPosts = () => {
                 title
                 slug
                 path
-                content
+                excerpt
                 featured_media {
                   localFile {
                     childImageSharp {

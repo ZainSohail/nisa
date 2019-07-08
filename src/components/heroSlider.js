@@ -30,7 +30,7 @@ export default ({ children }) => {
                                                     <div className="content">
                                                         <h3>{slide.subtitle}</h3>
                                                         <h2>{slide.title}</h2>
-                                                        <a href={slide.hero_slider_button_link}> {slide.hero_slider_button_label}</a>
+                                                        { /*<a href={slide.hero_slider_button_link}> {slide.hero_slider_button_label}</a>*/}
                                                     </div>
                                                 </div>
                                             </div>

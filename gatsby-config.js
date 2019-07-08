@@ -14,6 +14,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-glamor`,
     `gatsby-plugin-remove-trailing-slashes`,
+    `gatsby-plugin-transition-link`,
     {
       resolve: "gatsby-source-wordpress",
       options: {
@@ -137,6 +138,18 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-transition-link`
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Poppins`
+          },
+          {
+            family: `Open Sans`
+          },
+        ],
+      },
+    }
   ],
 }
