@@ -535,15 +535,15 @@ section.product-category {
         padding: 0px 10px;
         margin: 0; }
         section.product-category div.container-fluid div.product-carousel div.item div.img {
-          margin-bottom: 50px;
-          min-height: 300px;
-          border: 20px solid rgba(111, 111, 111, 0.11);
-          background: #fff;
-          box-shadow: 0px 0px 10px 3.26px rgba(101, 101, 101, 0.11);
-          -moz-box-shadow: 0px 0px 37.74px 13.26px rgba(101, 101, 101, 0.11);
-          -o-box-shadow: 0px 0px 37.74px 13.26px rgba(101, 101, 101, 0.11);
-          -ms-box-shadow: 0px 0px 37.74px 13.26px rgba(101, 101, 101, 0.11);
-          position: relative; }
+              margin-bottom: 50px;
+    min-height: 350px;
+    border: 20px solid rgba(111, 111, 111, 0.11);
+    background: rgba(111, 111, 111, 1);
+    box-shadow: 0px 0px 10px 3.26px rgba(101, 101, 101, 0.11);
+    -moz-box-shadow: 0px 0px 37.74px 13.26px rgba(101, 101, 101, 0.11);
+    -o-box-shadow: 0px 0px 37.74px 13.26px rgba(101, 101, 101, 0.11);
+    -ms-box-shadow: 0px 0px 37.74px 13.26px rgba(101, 101, 101, 0.11);
+    position: relative;}
           section.product-category div.container-fluid div.product-carousel div.item div.img div.inner img {
     position: absolute;
     max-width: 100%;
@@ -552,11 +552,11 @@ section.product-category {
     -moz-transform: scale(1.2);
     -o-transform: scale(1.2);
     -ms-transform: scale(1.2);
-    bottom: 25px;
-    max-width: 150px;
+    bottom: 0;
     left: 0;
     right: 0;
-    margin: 0 auto;
+    top: 0;
+    margin: auto;
         }
         section.product-category div.container-fluid div.product-carousel div.item h3 {
               font-size: 18px;

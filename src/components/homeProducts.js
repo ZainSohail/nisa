@@ -12,7 +12,7 @@ export default ({ children }) => {
       dots: false,
       infinite: false,
       speed: 500,
-      slidesToShow: 4,
+      slidesToShow: 2,
       slidesToScroll: 1,
       responsive: [
         {
