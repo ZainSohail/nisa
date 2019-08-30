@@ -14,7 +14,7 @@ class PageTemplate extends Component {
                     <div className="row row-eq-height">
                         {currentPage.map((product) => { 
                             return (
-                                <div className="col-md-4">
+                                <div className="col-sm-12 col-md-4">
                                     <div className="single-product">
                                         <a className="single-product-link" href={product.path}>
                                         <img 

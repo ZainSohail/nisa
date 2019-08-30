@@ -53,7 +53,7 @@ export default ({ children }) => {
                     <div className="row row-eq-height">
                         {productCategories.map((category) => {   
                             return (
-                              <div className="col-md-4 item">
+                              <div className="col-sm-12 col-md-4 item">
                                   <div className="img">
                                     <div className="inner">
                                       <img 
