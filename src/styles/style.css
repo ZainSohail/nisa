@@ -471,11 +471,13 @@ section.about-nisa {
   section.about-nisa img.left-img {
     position: absolute;
     top: -90px;
-    left: 0; }
+    left: 0;
+    z-index: 101; }
   section.about-nisa img.right-img {
     position: absolute;
-    top: -110px;
-    right: 0; }
+    top: -120px;
+    right: 0;
+    z-index: 101; }
   section.about-nisa:after {
     content: "";
     width: 0;
@@ -1439,4 +1441,41 @@ button.btn:hover,
 
 .page-title-wrapper {
   margin-bottom: 30px;
+}
+
+.single-product {
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.single-product-link h5 {
+    text-transform: none;
+    text-decoration: none;
+}
+
+section.product-category div.container-fluid a {
+    display: inline-block;
+    background: #fff;
+    border: 2px solid #a665f8;
+    text-decoration: none;
+    padding: 10px 40px;
+    font-size: 16px;
+    color: #a665f8;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: all ease-in-out 0.3s;
+    -webkit-transition: all ease-in-out 0.3s;
+    -moz-transition: all ease-in-out 0.3s;
+    -o-transition: all ease-in-out 0.3s;
+    -ms-transition: all ease-in-out 0.3s;
+}
+
+section.product-category div.item {
+    padding: 25px;
+}
+
+.col-md-4.item {
+    margin: 15px 0;
 }

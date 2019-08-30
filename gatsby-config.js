@@ -95,13 +95,28 @@ module.exports = {
           "**/menus",
           "**/options",
           "**/slides",
-          "**/products"
+          "**/products",
+          "**/product-category"
         ],
         // Blacklisted routes using glob patterns
         excludedRoutes: ["**/posts/1456"],
         // use a custom normalizer which is applied after the built-in ones.
-        normalizer: function({ entities }) {
-          return entities
+        normalizer: function mapProductsToCategories({ entities }) {
+          const genres = entities.filter(e => e.__type === `wordpress__wp_product-category`)
+
+          return entities.map(e => {
+            if (e.__type === `wordpress__wp_products`) {
+              let hasGenres = e.genres && Array.isArray(e.genres) && e.genres.length
+              // Replace genres with links to their nodes.
+              if (hasGenres) {
+                e.genres___NODE = e.genres.map(
+                  c => genres.find(gObj => c === gObj.wordpress_id).id
+                )
+                delete e.genres
+              }
+            }
+            return e
+          })
         },
       },
     },
