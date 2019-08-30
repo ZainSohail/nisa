@@ -1447,6 +1447,7 @@ button.btn:hover,
     border: 1px solid #eee;
     padding: 15px;
     border-radius: 5px;
+    margin-bottom: 15px;
 }
 
 .single-product-link h5 {
